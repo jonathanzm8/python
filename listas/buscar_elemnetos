@@ -1,0 +1,7 @@
+nombres= ["jonathan","luis", "miguel", "flora", "domenica", "luis"]
+
+print(3 in nombres) # comparacion 
+
+print(nombres.index("luis")) # buscar indice
+
+print(nombres.count("luis")) # conteo de elementos repetidos
