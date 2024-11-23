@@ -24,14 +24,30 @@ class Auto:
         else:
             print("¡Ya déjame descansar por favor!")
         return self.kilometraje
+    
+    @classmethod
+    def auto_año(cls,modelo, kilometraje=0):
+        año= 2020
+        marca="toyota"
+        return cls(año, marca,modelo, kilometraje)
+    
+    @staticmethod
+    def validar_kilometraje(auto1, auto2):
+        if auto1.kilometraje == auto2.kilometraje:
+            print("Kilometraje igual")
+        else:
+            print("No son iguales los kilometrajes")
+
+    
+  
 
 
-informacion = Auto("Hyundai", "Tucson", 2007)
+# informacion = Auto("Hyundai", "Tucson", 2007)
 
-print(informacion.mostrar_informacion())
+# print(informacion.mostrar_informacion())
 
-print(f"El nuevo kilometraje es: {informacion.actualizar_kilometraje(100)}")
+# print(f"El nuevo kilometraje es: {informacion.actualizar_kilometraje(100)}")
 
-print(f"El kilometraje después del viaje es: {informacion.realizar_viaje(100000)}")
+# print(f"El kilometraje después del viaje es: {informacion.realizar_viaje(100000)}")
 
-print(f"Estado del auto: {informacion.estado_auto()}")
+# print(f"Estado del auto: {informacion.estado_auto()}")
