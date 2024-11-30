@@ -9,6 +9,9 @@ class Laptop:
     def mostrar_informacion(self):
         return f"Marca: {self.marca}, procesador: {self.procesador}, memoria: {self.memoria}, costo: {self.costo}, impusto: {self.impuesto}"
 
+    def __str__(self):
+        return f"marca: {self.marca} \n procesador: {self.procesador}\n  memoria: {self.memoria} \n  costo: {self.costo} \n  impuesto: {self.impuesto}"
+    
     def valor_final(self):
         return self.costo + self.impuesto
     
@@ -24,6 +27,14 @@ class Laptop:
             "BATERIA": "OK" if random.choice([True,False]) else "cambiar de bateria"
         }
         return resultado
+    def realizar_informe(self):
+        informe= {
+            "tipo": "Generica",
+            "Uso recomendado": "tareas cotidianas",
+            "horas de uso": "5",
+            "diagnostico actual": self.realizar_diagnostico_sistema()
+        }
+        return informe
     
     @staticmethod
     def compara_costo(lapto1, laptop2):
@@ -55,4 +66,13 @@ class laptop_business(Laptop):
             "CONECTIVIDAD": "OK" if random.choice8([True,False]) else "no conectado"
         }
         return comprobacion
+    
+    def realizar_informe(self):
+        informe= {
+            "tipo": "laptop bussiness",
+            "Uso recomendado": "video juegos",
+            "horas de uso": "10",
+            "recomedaciones de software": ["antivirus","tarjetaVideo"]
+        }
+        return informe
     
